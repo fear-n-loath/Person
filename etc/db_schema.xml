@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="person" resource="default" engine="innodb" comment="Person Declarative">
+        <column xsi:type="smallint" name="entity_id" padding="6" unsigned="false" nullable="false" identity="true" comment="Guns Entity ID"/>
+        <column xsi:type="text" name="name" nullable="true" comment="Person Name"/>
+        <column xsi:type="text" name="surname" nullable="true" comment="Person Surname"/>
+        <column xsi:type="smallint" name="age" nullable="true" comment="Person Age"/>
+        <column xsi:type="text" name="gender" nullable="true" comment="Person Gender"/>
+        <column xsi:type="text" name="content" nullable="true" comment="Person's Content"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+</schema>
