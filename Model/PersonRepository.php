@@ -13,7 +13,7 @@ use Elogic\Person\Api\PersonRepositoryInterface;
 use Elogic\Person\Api\Data\PersonInterface;
 use Elogic\Person\Model\ResourceModel\Person\Collection;
 use Elogic\Person\Model\ResourceModel\Person as PersonResource;
-use Elogic\Person\Model\ResourceModel\Person\Collection as PersonCollectionFactory;
+use Elogic\Person\Model\ResourceModel\Person\CollectionFactory as PersonCollectionFactory;
 
 /**
  * Class PersonRepository
