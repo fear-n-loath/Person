@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elogic_Person::person" title="Person" module="Elogic_Person" sortOrder="51" resource="Elogic_Person::person"/>
+        <add id="Elogic_Person::person_grid" title="Manage Persons" module="Elogic_Person" sortOrder="10" action="elogic_person/person/index" resource="Elogic_Person::person_grid" parent="Elogic_Person::person"/>
+        <add id="Elogic_Person::person_configuration" title="Configuration" module="Elogic_Person" sortOrder="99" parent="Elogic_Person::person" action="adminhtml/system_config/edit/section/person_section" resource="Elogic_Person::person_configuration"/>
+    </menu>
+</config>
