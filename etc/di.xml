@@ -1,5 +1,20 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference for="Elogic\Person\Api\PersonRepositoryInterface" type="Elogic\Person\Model\PersonRepository"/>
-    <preference for="Elogic\Person\Api\Data\PersonInterface" type="Elogic\Person\Model\PersonModel"/>
+    <preference for="Elogic\Person\Api\PersonRepositoryInterface"
+                type="Elogic\Person\Model\PersonRepository"/>
+    <preference for="Elogic\Person\Api\Data\PersonInterface"
+                type="Elogic\Person\Model\PersonModel"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="person_listing_data_source" xsi:type="string">Elogic\Person\Model\ResourceModel\Person\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Elogic\Person\Model\ResourceModel\Person\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">person</argument>
+            <argument name="resourceModel" xsi:type="string">Elogic\Person\Model\ResourceModel\Person</argument>
+        </arguments>
+    </virtualType>
 </config>
