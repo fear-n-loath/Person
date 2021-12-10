@@ -1,0 +1,18 @@
+<?php
+
+use Elogic\Person\Block\PersonList;
+use Magento\Framework\Api\SearchCriteriaInterface;
+
+
+/**
+ * @var PersonList $block
+ */
+/**
+ * @var PersonList $row
+ */
+$row = $block->getPersons();
+
+?>
+
+<h1>BOOoooM</h1>
+<?php foreach ($row->getItems() as $item) echo $item ?>
